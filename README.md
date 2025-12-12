@@ -53,29 +53,32 @@ The script uses specific tuning parameters for the Haar Cascades to balance spee
 * A working webcam
 
 ### 1. Clone the Repository
-```bash
-git clone <repository-url>
+```
+git clone github.com/vargheesk/Mask-detection-Haar-Cascades-only
 cd mask-detection-haar-cascades-only
-2. Create a Virtual Environment (Windows)
+```
+### 2. Create a Virtual Environment (Windows)
 It is recommended to use a virtual environment to manage dependencies.
 
-Bash
+```
 
 python -m venv venv
 .\venv\Scripts\activate
-3. Install Dependencies
-Bash
+```
+### 3. Install Dependencies
 
+```
 pip install opencv-python
-4. Run the Application
+```
+### 4. Run the Application
 Ensure the .xml cascade files are in the same folder as the notebook/script.
 
-Bash
 
-# If running via Jupyter Notebook
+
+## If running via Jupyter Notebook
 jupyter notebook mask.ipynb
 Press q on your keyboard to close the webcam window and stop the program.
-
+```
 📂 Project Structure
 Plaintext
 
@@ -86,18 +89,22 @@ Plaintext
 ├── haarcascade_mcs_nose.xml             # Pre-trained nose model
 ├── mask.ipynb                 # Main application logic
 └── README.md                  # Project documentation
-⚠️ Limitations & Known Issues
-Lighting Sensitivity: Haar cascades struggle in low-light environments, which may lead to failure in detecting the face entirely.
 
-Occlusion False Positives: Covering your mouth with your hand may be interpreted as "Masked" because the algorithm only looks for feature absence.
+```
+## ⚠️ Limitations & Known Issues
 
-Side Profiles: The frontalface classifier does not detect faces turned to the side.
+- Lighting Sensitivity: Haar cascades struggle in low-light environments, which may lead to failure in detecting the face entirely.
 
-🔮 Future Scope
-To improve robustness, future versions of this project could include:
+- Occlusion False Positives: Covering your mouth with your hand may be interpreted as "Masked" because the algorithm only looks for feature absence.
 
-Deep Learning Integration: Replacing Haar Cascades with MobileNetV2 or MTCNN for better accuracy in complex lighting.
+- Side Profiles: The frontalface classifier does not detect faces turned to the side.
 
-Mask Type Classification: Distinguishing between N95, surgical, and cloth masks.
+## 🔮 Future Scope
 
-Distance Estimation: Alerting users if they are too close to the camera while unmasked.
+- To improve robustness, future versions of this project could include:
+
+- Deep Learning Integration: Replacing Haar Cascades with MobileNetV2 or MTCNN for better accuracy in complex lighting.
+
+- Mask Type Classification: Distinguishing between N95, surgical, and cloth masks.
+
+- Distance Estimation: Alerting users if they are too close to the camera while unmasked.
